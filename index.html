@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-  	<meta charset="utf-8">
-  	<meta name="description" content="Your description goes here">
-  	<meta name="keywords" content="one, two, three">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<title>Todo</title>
 
-		<!-- external CSS link -->
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<main>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Your description goes here">
+	<meta name="keywords" content="one, two, three">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Todo</title>
+
+	<!-- external CSS link -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<main>
+		<fieldset>
 			<input type="text" name="task" id="task">
 			<button id="add_task">+</button>
-			<ul id="task_list">
-				list here
-			</ul>
-			<button id="clear_completed"></button>
-			<button id="clear"></button>
-		</main>
+		</fieldset>
+		<ul id="task_list"></ul>
+		<div>
+			<button id="clear_completed">Clear completed</button>
+			<button id="clear">Clear All</button>
+		</div>
 
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+	</main>
+
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
 </html>

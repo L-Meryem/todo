@@ -4,28 +4,31 @@ add.addEventListener('click', addTask);
 function addTask() {
     const task = document.querySelector('#task').value;
     const ul = document.querySelector('#task_list');
+    //Create li, content
     const li = document.createElement('li');
     const content = document.createTextNode(task);
+    //Style li
+    li.classList.add('created_task');
+    li.addEventListener('click', () => { 
+        li.classList.toggle('crossed_task');
+    });
+    //Connect things
     li.appendChild(content);
     ul.append(li);
-
-    createListner();
 }
 
-function markCompleted(completed) {
-    completed.style.textDecoration = 'line-through';
-}
+//Clearing
+
+const clear = document.querySelector('#clear');
+clear.addEventListener('click', clearAll)
+
+const clearChecked = document.querySelector('#clear_completed');
+clearChecked.addEventListener('click', clearCompleted)
 
 function clearCompleted() {
-
+    document.querySelectorAll('.crossed_task').forEach(li => li.remove());
 }
 
 function clearAll() {
-
+    document.querySelector('#task_list').innerHTML = "";
 }
-
-function createListner(){
-    const complete = document.querySelectorAll('li');
-    complete.forEach(completed => completed.addEventListener('click', () => markCompleted(completed)))
-}
-

@@ -5,16 +5,16 @@
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 /******************************************
@@ -22,21 +22,80 @@
 /*******************************************/
 
 body {
-
+  display: flex;
+  justify-content: center;
 }
 
+main {
+  width: 80%;
+  margin-top: 20px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(205, 205, 236, 0.457);
+}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
 
+fieldset {
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 1em;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
-footer {
+input,
+button {
+  font-size: 1.7rem;
+  padding: 10px 5px;
+  border: 1px solid gray;
+  border-radius: 6px;
+}
 
+input {
+  width: 70%;
+  margin-right: 5px;
+}
+
+fieldset button {
+  width: 20%;
+}
+
+button {
+  background-color: tomato;
+  color: white;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+#clear_completed,
+#clear {
+  /* width: 40%; */
+  flex: 1;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+.created_task {
+  border-bottom: 1px solid gray;
+  padding: 1rem 0.5rem;
+  font-size: 1.4rem;
+  list-style-type: '❏ ';
+  list-style-position: inside;
+}
+
+.crossed_task {
+  list-style-type: '✔︎ ';
+  background-color: tomato;
+}
