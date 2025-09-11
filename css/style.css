@@ -28,6 +28,7 @@ body {
 
 main {
   width: 80%;
+  min-width: 258px;
   margin-top: 20px;
   border: 1px solid gray;
   border-radius: 8px;
@@ -93,9 +94,20 @@ div {
   font-size: 1.4rem;
   list-style-type: '❏ ';
   list-style-position: inside;
+  /* overflow-wrap: break-word; */
+   word-break: break-all;
+   line-height: 1.4;
 }
 
 .crossed_task {
   list-style-type: '✔︎ ';
   background-color: tomato;
+}
+
+@media screen and (max-width:440px) {
+  div{
+    display: flex;
+    flex-direction: column;
+  }
+  
 }
