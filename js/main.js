@@ -15,6 +15,8 @@ function addTask() {
     //Connect things
     li.appendChild(content);
     ul.append(li);
+    //Clear the field
+    document.querySelector('#task').value= "";
 }
 
 //Clearing
