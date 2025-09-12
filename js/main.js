@@ -6,17 +6,23 @@ function addTask() {
     const ul = document.querySelector('#task_list');
     //Create li, content
     const li = document.createElement('li');
-    const content = document.createTextNode(task);
     //Style li
     li.classList.add('created_task');
-    li.addEventListener('click', () => { 
+    //If task empty add random quotes API lol
+    if (task === "")
+        quote();
+    else {
+        const content = document.createTextNode(task);
+        li.appendChild(content);
+        ul.append(li);
+    }
+    //Clear the field
+    document.querySelector('#task').value = "";
+
+    //Listen to li clicks
+    li.addEventListener('click', () => {
         li.classList.toggle('crossed_task');
     });
-    //Connect things
-    li.appendChild(content);
-    ul.append(li);
-    //Clear the field
-    document.querySelector('#task').value= "";
 }
 
 //Clearing
@@ -33,4 +39,14 @@ function clearCompleted() {
 
 function clearAll() {
     document.querySelector('#task_list').innerHTML = "";
+}
+
+
+//Quotes API
+function quote() {
+    fetch('http://api.quotable.io/random')
+        .then(res => res.json())
+        .then(data => {
+            document.querySelector('#task').value = data.content;
+        })
 }
