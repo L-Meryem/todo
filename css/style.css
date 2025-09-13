@@ -94,9 +94,8 @@ div {
   font-size: 1.4rem;
   list-style-type: '❏ ';
   list-style-position: inside;
-  /* overflow-wrap: break-word; */
-   word-break: break-all;
-   line-height: 1.4;
+  word-break: break-all;
+  line-height: 1.4;
 }
 
 .crossed_task {
@@ -105,12 +104,13 @@ div {
 }
 
 @media screen and (max-width:574px) {
-  div{
+  div {
     display: flex;
     flex-direction: column;
   }
-  input{
+
+  input {
     font-size: 1.2rem;
   }
-  
+
 }
