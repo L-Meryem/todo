@@ -44,7 +44,7 @@ function clearAll() {
 
 //Quotes API
 function quote() {
-    fetch('http://api.quotable.io/random')
+    fetch('https://api.quotable.io/random')
         .then(res => res.json())
         .then(data => {
             document.querySelector('#task').value = data.content;
