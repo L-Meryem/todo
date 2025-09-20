@@ -1,22 +1,20 @@
-# ✅ Week05 Bootcamp2019 Project: Todo List
+## Description
+A minimalistic todo list with a quote generator
 
-### Goal: Build a Simple Todo List
+[Try the Live demo!](https://l-meryem.github.io/todo/)
 
-### How to submit your code for review:
 
-- Fork and clone this repo
-- Create a new branch called answer
-- Checkout answer branch
-- Push to your fork
-- Issue a pull request
-- Your pull request description should contain the following:
-  - (1 to 5 no 3) I completed the challenge
-  - (1 to 5 no 3) I feel good about my code
-  - Anything specific on which you want feedback!
+<a href="https://l-meryem.github.io/todo/" target="_blank" ><img width="600" alt="Screenshot of Todo" src="https://github.com/user-attachments/assets/5382e175-6c2f-4a59-8a96-2c07ea33d912" /></a>
 
-Example:
-```
-I completed the challenge: 5
-I feel good about my code: 4
-I'm not sure if my constructors are setup cleanly...
-```
+
+
+### Tech used 
+ - `HTML`
+ - `CSS`
+ - `JavaScript`
+
+### Lessions Learned
+- Connecting an API to my app using fetch
+- Troubleshooting github push errors
+- Better management of my events
+- Adding CSS styling with classlist.add() instead of writing CSS in JS
