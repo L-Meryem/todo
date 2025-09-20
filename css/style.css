@@ -102,6 +102,7 @@ div {
 .crossed_task {
   list-style-type: '✔︎ ';
   background-color: tomato;
+  text-decoration: line-through;
 }
 
 @media screen and (max-width:574px) {
